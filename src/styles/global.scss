@@ -1,0 +1,54 @@
+@import "animate.css";
+
+@import "reboot";
+@import "colors";
+@import "dimens";
+
+:root {
+  --font-family: "Poppins", system-ui, -apple-system, "Segoe UI", "Roboto",
+    "Ubuntu", "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-size: 16px;
+}
+
+// Light theme (Default)
+// Can be forced with data-theme="light"
+@import "light";
+
+// Dark theme (Auto)
+// Automatically enabled if user has Dark mode enabled
+@import "dark";
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark;
+  }
+}
+
+// Dark theme (Forced)
+// Enabled if forced with data-theme="dark"
+[data-theme="dark"] {
+  @include dark;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  &:hover {
+    color: var(--link-color-hover);
+  }
+  &:focus {
+    color: var(--link-color-focus);
+  }
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
