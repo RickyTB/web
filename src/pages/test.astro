@@ -1,55 +1,51 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer.svelte';
-import Nav from '../components/Nav.svelte';
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer.svelte";
+import Nav from "../components/Nav.svelte";
 ---
 
 <html lang="en">
-	<head>
-		<MainHead title="Test" />
-	</head>
-	<body>
-		<Nav />
-		<div class="wrapper mt4 mb4">
-		<header class="hero">
-			<div class="bg"
-				width="1600"
-				height="1131"
-			></div>
+  <head>
+    <MainHead title="Test" />
+  </head>
+  <body>
+    <Nav />
+    <div class="wrapper mt4 mb4">
+      <header class="hero">
+        <div class="bg" width="1600" height="1131"></div>
       </header>
-		</div>
-		<Footer />
-	</body>
+    </div>
+    <Footer />
+  </body>
 </html>
 
-
-<!-- 512 × 848--> 
+<!-- 512 × 848-->
 
 <style>
-.bg {
-  --width: 512px;
-  --height: 848px;
-  background: url('/magnus-2050.png') repeat repeat;
-  animation: move-image 20s linear infinite forwards;
-	width:100%;
-	height: 700px;
-}
+  .bg {
+    --width: 512px;
+    --height: 848px;
+    background: url("/magnus-2050.png") repeat repeat;
+    animation: move-image 20s linear infinite forwards;
+    width: 100%;
+    height: 700px;
+  }
 
-@keyframes move-image {
-  0% {
-    background-position: 0 0;
+  @keyframes move-image {
+    0% {
+      background-position: 0 0;
+    }
+    25% {
+      background-position: calc(var(--width) * 0.25) calc(var(--height) * 0.25);
+    }
+    50% {
+      background-position: calc(var(--width) * 0.5) calc(var(--height) * 0.5);
+    }
+    75% {
+      background-position: calc(var(--width) * 0.75) calc(var(--height) * 0.75);
+    }
+    100% {
+      background-position: calc(var(--width) * 1) calc(var(--height) * 1);
+    }
   }
-  25% {
-    background-position: calc(var(--width) * 0.25) calc(var(--height) * 0.25);
-  }
-  50% {
-    background-position: calc(var(--width) * 0.5) calc(var(--height) * 0.5);
-  }
-  75% {
-    background-position: calc(var(--width) * 0.75) calc(var(--height) * 0.75);
-  }
-  100% {
-    background-position: calc(var(--width) * 1) calc(var(--height) * 1);
-  }
-}
 </style>

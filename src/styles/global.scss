@@ -36,6 +36,13 @@ body {
   font-size: var(--font-size);
   background-color: var(--background-color);
   color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 a {
@@ -51,4 +58,16 @@ a {
 .container {
   max-width: 100rem;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+  background-color: var(--card-background-color);
+}
+
+.card-body {
+  padding: 1rem;
 }

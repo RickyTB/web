@@ -1,5 +1,8 @@
 ---
-const { title = 'Ricardo Baquero\'s site', description = 'Ricardo Baquero is a software developer base in Quito.' } = Astro.props;
+const {
+  title = "Ricardo Baquero's site",
+  description = "Ricardo Baquero is a software developer base in Quito.",
+} = Astro.props;
 ---
 
 <meta charset="UTF-8" />
@@ -8,7 +11,14 @@ const { title = 'Ricardo Baquero\'s site', description = 'Ricardo Baquero is a s
 <title>{title}</title>
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/global.scss')} />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href={Astro.resolve("../styles/global.scss")}
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  rel="stylesheet"
+/>

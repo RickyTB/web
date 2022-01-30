@@ -1,83 +1,84 @@
 ---
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import Layout from '../components/Layout.svelte';
-import Patterns from '../components/Patterns.svelte';
-import SocialRow from '../components/SocialRow.svelte';
+import MainHead from "../components/MainHead.astro";
+import Layout from "../components/Layout.svelte";
+import Patterns from "../components/Patterns.svelte";
+import SocialRow from "../components/SocialRow.svelte";
+import AboutMe from "../components/AboutMe.svelte";
 
 // Data Fetching: List all Markdown posts in the repo.
-const projects = Astro.fetchContent('./project/**/*.md');
+const projects = Astro.fetchContent("./project/**/*.md");
 const featuredProject = projects[0];
-
 ---
 
 <html lang="en">
-	<head>
-		<MainHead  />
-	</head>
-	<body>
-	<Layout>
-			<section class="hero">
-				<div class="container">
-					<div class="content">
-						<h1 class="animate__animated animate__fadeInUp">
-							Hi, I'm Ricardo
-						</h1>
-						<p class="animate__animated animate__fadeInUp">
-					 		Welcome to my site! I'm a software developer based in Quito, <span title="Ecuador">🇪🇨</span>. 
-						</p>
-						<SocialRow/>
-					</div>
-				</div>
-				<Patterns />
-			</section>
-		<main>
-		</main>
-	</Layout>
-	</body>
+  <head>
+    <MainHead />
+  </head>
+  <body>
+    <Layout>
+      <section class="hero">
+        <Patterns />
+        <div class="container">
+          <div class="content">
+            <h1 class="animate__animated animate__fadeInUp">Hi, I'm Ricardo</h1>
+            <p class="animate__animated animate__fadeInUp">
+              Welcome to my site! I'm a software developer based in Quito, <span
+                title="Ecuador">🇪🇨</span
+              >.
+            </p>
+            <SocialRow />
+          </div>
+        </div>
+      </section>
+      <main class="container">
+        <AboutMe />
+      </main>
+    </Layout>
+  </body>
 </html>
 
 <style lang="scss">
   @import "../styles/helpers.scss";
 
-	.hero {
-		height: 100vh;
-		position: relative;
-		overflow: hidden;
-		:global(.pattern) {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: -80%;
-			opacity: 0.2;
+  .hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    :global(.pattern) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -80%;
+      opacity: 0.2;
 
-    	@include breakpoint("md") {
-				right: -15%;
-				opacity: 1;
-    	}
-		}
-		.container {
-			height: 70%;
-			z-index: 50;
-		}
-		.content {
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			margin: auto auto;
-			justify-content: center;
-			align-items: stretch;
-			padding: 1rem;
-			h1 {
-				font-size: 4rem;
-				color: var(--link-color);
-				margin-bottom: 0;
-				line-height: 1.2;
-			}
-			p {
-				font-size: 1.25rem;
-				margin-bottom: 3rem;
-			}
-		}
-	}
+      @include breakpoint("md") {
+        right: -15%;
+        opacity: 1;
+      }
+    }
+    .container {
+      height: 80%;
+      z-index: 50;
+    }
+    .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto auto;
+      justify-content: center;
+      align-items: stretch;
+      h1 {
+        font-size: 4rem;
+        color: var(--link-color);
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+      p {
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
 </style>

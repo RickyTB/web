@@ -8,9 +8,9 @@
       <li class="brand"><a href="/"><strong>Ricardo Baquero</strong></a></li>
     </ul>
     <ul>
-      <li><a href="/about">About</a></li>
+      <li><a href="/#about">About</a></li>
       <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -61,6 +61,6 @@
     }
   }
   .brand {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 </style>

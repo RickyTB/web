@@ -6,16 +6,20 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "yarn prettier -w ."
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.3.1",
     "@iconify-json/fe": "^1.0.1",
+    "@iconify-json/logos": "^1.0.4",
     "@iconify-json/mdi": "^1.0.14",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.36",
     "astro": "^0.22.18",
     "autoprefixer": "^10.4.2",
-    "postcss-load-config": "^3.1.1"
+    "postcss-load-config": "^3.1.1",
+    "prettier": "^2.5.1",
+    "prettier-plugin-astro": "^0.0.12"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

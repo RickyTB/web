@@ -1,6 +1,6 @@
 <script lang="ts">
   import LinkedInIcon from "~icons/mdi/linkedin";
-  import GithubIcon from "~icons/fe/github";
+  import GitHubIcon from "~icons/fe/github";
   import TwitterIcon from "~icons/fe/twitter";
   import MailIcon from "~icons/fe/mail";
 </script>
@@ -9,18 +9,18 @@
 <p class="animate__animated animate__fadeIn animate__delay-1s">
   <a
     href="https://www.linkedin.com/in/ricardo-baquero/"
-    class="mr-3"
     target="_blank"
+    title="LinkedIn"
   >
     <LinkedInIcon />
   </a>
-  <a href="https://github.com/RickyTB" target="_blank">
-    <GithubIcon />
+  <a href="https://github.com/RickyTB" target="_blank" title="GitHub">
+    <GitHubIcon />
   </a>
-  <a href="https://twitter.com/RocordoB" class="mr-3" target="_blank">
+  <a href="https://twitter.com/RocordoB" target="_blank" title="Twitter">
     <TwitterIcon />
   </a>
-  <a href="mailto:ricardo@buenplan.com.ec" class="mr-3" target="_blank">
+  <a href="mailto:ricardo@buenplan.com.ec" target="_blank" title="Email">
     <MailIcon />
   </a>
 </p>
@@ -42,6 +42,8 @@
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
+    transition: background-color 200ms, color 200ms;
+    transition-timing-function: ease-in;
     &:hover {
       background-color: var(--link-color-hover);
       color: #000;
