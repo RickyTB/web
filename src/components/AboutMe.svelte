@@ -17,7 +17,7 @@
       </div>
       <div class="content">
         <p>
-          I'm a software developer with a passion in technology and learing. I
+          I'm a software developer with a passion in technology and learning. I
           created this website with the goal of experimenting with new
           languages, metodologies, or technology in general and record my
           findings.

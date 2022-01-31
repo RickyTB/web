@@ -1,7 +1,8 @@
 ---
 // Component Imports
 import MainHead from "../components/MainHead.astro";
-import Layout from "../components/Layout.svelte";
+import Nav from "../components/Nav.svelte";
+import Footer from "../components/Footer.svelte";
 import Patterns from "../components/Patterns.svelte";
 import SocialRow from "../components/SocialRow.svelte";
 import AboutMe from "../components/AboutMe.svelte";
@@ -16,25 +17,25 @@ const featuredProject = projects[0];
     <MainHead />
   </head>
   <body>
-    <Layout>
-      <section class="hero">
-        <Patterns />
-        <div class="container">
-          <div class="content">
-            <h1 class="animate__animated animate__fadeInUp">Hi, I'm Ricardo</h1>
-            <p class="animate__animated animate__fadeInUp">
-              Welcome to my site! I'm a software developer based in Quito, <span
-                title="Ecuador">🇪🇨</span
-              >.
-            </p>
-            <SocialRow />
-          </div>
+    <Nav client:load />
+    <section class="hero">
+      <Patterns />
+      <div class="container">
+        <div class="content">
+          <h1 class="animate__animated animate__fadeInUp">Hi, I'm Ricardo</h1>
+          <p class="animate__animated animate__fadeInUp">
+            Welcome to my site! I'm a software developer based in Quito, <span
+              title="Ecuador">🇪🇨</span
+            >.
+          </p>
+          <SocialRow />
         </div>
-      </section>
-      <main class="container">
-        <AboutMe />
-      </main>
-    </Layout>
+      </div>
+    </section>
+    <main class="container">
+      <AboutMe />
+    </main>
+    <Footer />
   </body>
 </html>
 
