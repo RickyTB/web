@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "yarn prettier -w ."
+    "format": "yarn prettier -w .",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.3.1",
@@ -17,6 +18,7 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.36",
     "astro": "^0.22.18",
     "autoprefixer": "^10.4.2",
+    "gh-pages": "^3.2.3",
     "postcss-load-config": "^3.1.1",
     "prettier": "^2.5.1",
     "prettier-plugin-astro": "^0.0.12"
@@ -24,5 +26,6 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "unplugin-icons": "^0.13.0"
-  }
+  },
+  "homepage": "https://ricardobaquero.com"
 }

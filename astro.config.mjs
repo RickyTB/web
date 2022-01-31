@@ -11,6 +11,9 @@ import Icons from "unplugin-icons/vite";
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the Svelte renderer to support Svelte components.
   renderers: ["@astrojs/renderer-svelte"],
+  buildOptions: {
+    site: "https://ricardobaquero.com",
+  },
   vite: {
     plugins: [
       Icons({

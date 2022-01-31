@@ -8,9 +8,9 @@
   import SwiftIcon from "~icons/logos/swift";
 </script>
 
+<h3>About me</h3>
 <div class="card" id="about">
   <div class="card-body">
-    <h3>About me</h3>
     <div class="row">
       <div class="pic">
         <img src="/img/pic_web.jpeg" alt="Ricardo Baquero" />
@@ -23,8 +23,8 @@
           findings.
         </p>
         <p class="no-space">
-          Go ahead and check out some of my work, my favorite technologies at
-          the moment are:
+          Go ahead and check out some of my work, my favorite technologies
+          currently are:
         </p>
         <ul>
           <li><ReactIcon /> React</li>
@@ -59,7 +59,7 @@
       width: var(--size);
       height: var(--size);
       border-radius: 50%;
-      border: 2px solid #fff;
+      border: 2px solid var(--heading-color);
     }
   }
   .content {
