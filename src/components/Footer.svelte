@@ -1,22 +1,25 @@
 <script lang="ts">
+  import SocialRow from "./SocialRow.svelte";
+
   export let name = "Ricardo Baquero";
 </script>
 
 <footer>
   &copy; {new Date().getFullYear()}
   {name}
-  <small>🚀 Built with Astro</small>
+  <SocialRow class="row" />
 </footer>
 
-<style>
+<style lang="scss">
   footer {
     text-align: center;
-    padding: 8rem 2rem 4rem;
-  }
-
-  small {
-    display: block;
-    margin-top: 1rem;
-    text-transform: uppercase;
+    padding: 4rem 2rem 4rem;
+    :global(.row) {
+      margin-top: 0.25rem;
+      --heading-color: #ffffffaa;
+      :global(a) {
+        transform: scale(0.9);
+      }
+    }
   }
 </style>

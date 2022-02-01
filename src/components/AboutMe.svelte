@@ -8,7 +8,7 @@
   import SwiftIcon from "~icons/logos/swift";
 </script>
 
-<h3>About me</h3>
+<h2>About me</h2>
 <div class="card" id="about">
   <div class="card-body">
     <div class="row">

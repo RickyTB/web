@@ -3,10 +3,12 @@
   import GitHubIcon from "~icons/fe/github";
   import TwitterIcon from "~icons/fe/twitter";
   import MailIcon from "~icons/fe/mail";
+
+  let className = "";
+  export { className as class };
 </script>
 
-<p class="animate__animated animate__fadeIn animate__delay-1s">Wanna chat?</p>
-<p class="animate__animated animate__fadeIn animate__delay-1s">
+<p class={className}>
   <a
     href="https://www.linkedin.com/in/ricardo-baquero/"
     target="_blank"
@@ -35,7 +37,7 @@
     height: var(--size);
     width: var(--size);
     background-color: transparent;
-    color: #fff;
+    color: var(--heading-color);
     border-radius: 50%;
     font-size: 1.6rem;
     display: inline-flex;
