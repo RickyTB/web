@@ -1,0 +1,31 @@
+:root {
+  // Document
+  --background-color: #fafafa;
+  --text-color: #000000;
+
+  // Headings
+  --heading-color: #6c6cc4;
+
+  // Links
+  --link-color: var(--primary-500);
+  --link-color-hover: var(--primary-300);
+  --link-color-focus: var(--primary-700);
+  --link-color-visited: var(--secondary-200);
+
+  // Cards
+  --card-background-color: #ffffff;
+
+  // Controls
+  --control-background-color: #e6e6e6;
+  --control-text-color: #000000;
+  --control-placeholder-color: #2b2b38d8;
+
+  // Navbar
+  --navbar-background-color: #373763dd;
+  --navbar-text-color: #ffffff;
+  --navbar-hover-color: rgba(255, 255, 255, 0.9);
+  --navbar-focus-color: rgba(255, 255, 255, 0.8);
+
+  // Hero
+  --hero-background-color: #ffffff;
+}

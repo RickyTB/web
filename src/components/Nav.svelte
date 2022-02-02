@@ -42,7 +42,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(16, 16, 28, 0.75);
+    background: var(--navbar-background-color);
+    box-shadow: var(--box-shadow);
     &.sticky {
       position: sticky;
     }
@@ -69,14 +70,22 @@
   .brand {
     font-size: 1.25rem;
     a {
+      color: var(--navbar-text-color);
       text-decoration: none;
+
+      &:hover {
+        color: var(--navbar-hover-color);
+      }
+      &:focus {
+        color: var(--navbar-focus-color);
+      }
     }
   }
   .menu {
     display: block;
     background-color: transparent;
     border: none;
-    color: var(--link-color);
+    color: var(--navbar-text-color);
     border-radius: calc(var(--border-radius) / 2);
     padding: 0.25rem 0.5rem;
     line-height: 0.9;
@@ -84,7 +93,7 @@
     outline: none;
 
     &:focus {
-      color: var(--link-color-focus);
+      color: var(--navbar-focus-color);
     }
 
     @include breakpoint("md") {

@@ -8,8 +8,8 @@
   import SwiftIcon from "~icons/logos/swift";
 </script>
 
-<h2>About me</h2>
-<div class="card" id="about">
+<h2 id="about">About me</h2>
+<div class="card">
   <div class="card-body">
     <div class="row">
       <div class="pic">
@@ -17,7 +17,7 @@
       </div>
       <div class="content">
         <p>
-          I'm a software developer with a passion in technology and learning. I
+          I'm a software developer with a passion for technology and learning. I
           created this website with the goal of experimenting with new
           languages, metodologies, or technology in general and record my
           findings.

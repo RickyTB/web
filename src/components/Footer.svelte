@@ -16,9 +16,12 @@
     padding: 4rem 2rem 4rem;
     :global(.row) {
       margin-top: 0.25rem;
-      --heading-color: #ffffffaa;
       :global(a) {
         transform: scale(0.9);
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }

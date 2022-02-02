@@ -20,4 +20,13 @@
   --control-background-color: #555597;
   --control-text-color: #ffffff;
   --control-placeholder-color: #babafad8;
+
+  // Navbar
+  --navbar-background-color: rgba(16, 16, 28, 0.75);
+  --navbar-text-color: var(--link-color);
+  --navbar-hover-color: var(--link-color-hover);
+  --navbar-focus-color: var(--link-color-focus);
+
+  // Hero
+  --hero-background-color: transparent;
 }

@@ -1,16 +1,14 @@
 <script lang="ts">
   import SendIcon from "~icons/mdi/send";
-  import EmailIcon from "~icons/mdi/email";
 </script>
 
-<h2>Get in touch</h2>
-<div class="card" id="contact">
+<h2 id="contact">Get in touch</h2>
+<div class="card">
   <div class="row">
     <form class="content" method="post">
       <p>
         Looking to hire a remote software developer to help you build an amazing
-        app? Send me a message and I'll be more than happy to send you my
-        resume.
+        app? Send me a message and I'll be more than happy to help.
       </p>
       <div class="form-group">
         <label for="form-name">Name</label>
