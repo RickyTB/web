@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "firebase": "^9.6.6",
     "unplugin-icons": "^0.13.0"
   },
   "homepage": "https://ricardobaquero.com"
