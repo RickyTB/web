@@ -4,7 +4,7 @@
   import TypeScriptIcon from "~icons/logos/typescript-icon";
   import NodeIcon from "~icons/logos/nodejs-icon";
   import FlutterIcon from "~icons/logos/flutter";
-  import KotlinIcon from "~icons/logos/kotlin";
+  import KotlinIcon from "~icons/logos/kotlin-icon";
   import SwiftIcon from "~icons/logos/swift";
 </script>
 

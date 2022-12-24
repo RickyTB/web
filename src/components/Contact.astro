@@ -1,0 +1,56 @@
+---
+import { Image } from "@astrojs/image/components";
+import ContactForm from "./ContactForm.svelte";
+import devPicPath from "../assets/dev_pic.jpg";
+---
+
+<h2 id="contact">Get in touch</h2>
+<div class="card">
+  <div class="row">
+    <ContactForm client:visible />
+    <div class="contact-pic">
+      <Image
+        alt="Development"
+        src={devPicPath}
+        class="contact-pic-image"
+        height={1009}
+      />
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @import "../styles/helpers.scss";
+
+  .card {
+    overflow: hidden;
+  }
+
+  .row {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    @include breakpoint("md") {
+      flex-direction: row;
+    }
+  }
+
+  .contact-pic {
+    position: relative;
+    display: none;
+
+    @include breakpoint("md") {
+      display: block;
+      width: 33%;
+    }
+
+    .contact-pic-image {
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      max-height: 720px;
+    }
+  }
+</style>

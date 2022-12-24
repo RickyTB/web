@@ -1,4 +1,5 @@
 ---
+import "../styles/global.scss"
 const {
   title = "Ricardo Baquero's site",
   description = "Ricardo Baquero is a software developer base in Quito.",
@@ -11,11 +12,6 @@ const {
 <title>{title}</title>
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link
-  rel="stylesheet"
-  type="text/css"
-  href={Astro.resolve("../styles/global.scss")}
-/>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link

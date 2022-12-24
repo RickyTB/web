@@ -6,11 +6,10 @@ import Footer from "../components/Footer.svelte";
 import Patterns from "../components/Patterns.svelte";
 import SocialRow from "../components/SocialRow.svelte";
 import AboutMe from "../components/AboutMe.svelte";
-import Contact from "../components/Contact.svelte";
+import Contact from "../components/Contact.astro";
 
 // Data Fetching: List all Markdown posts in the repo.
-const projects = Astro.fetchContent("./project/**/*.md");
-const featuredProject = projects[0];
+const projects = [];
 ---
 
 <html lang="en">
@@ -32,64 +31,64 @@ const featuredProject = projects[0];
           <p class="animate__animated animate__fadeIn animate__delay-1s">
             Wanna chat?
           </p>
-          <SocialRow class="animate__animated animate__fadeIn animate__delay-1s"
+          <SocialRow
+            class="animate__animated animate__fadeIn animate__delay-1s"
           />
         </div>
       </div>
     </section>
     <main class="container">
       <AboutMe />
-      <Contact client:visible />
+      <Contact />
     </main>
     <Footer />
-  </body>
-</html>
+    <style lang="scss">
+      @import "../styles/helpers.scss";
 
-<style lang="scss">
-  @import "../styles/helpers.scss";
+      .hero {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        background-color: var(--hero-background-color);
+        :global(.pattern) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: -80%;
+          opacity: 0.2;
 
-  .hero {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    background-color: var(--hero-background-color);
-    :global(.pattern) {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: -80%;
-      opacity: 0.2;
-
-      @include breakpoint("md") {
-        right: -15%;
-        opacity: 1;
-      }
-    }
-    .container {
-      height: 80%;
-      z-index: 50;
-    }
-    .content {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      margin: auto auto;
-      justify-content: center;
-      align-items: stretch;
-      h1 {
-        font-size: 4rem;
-        color: var(--link-color);
-        margin-bottom: 0;
-        line-height: 1.2;
-      }
-      p {
-        font-size: 1.25rem;
-        margin-bottom: 0;
-        &.print {
-          margin-bottom: 3rem;
+          @include breakpoint("md") {
+            right: -15%;
+            opacity: 1;
+          }
+        }
+        .container {
+          height: 80%;
+          z-index: 50;
+        }
+        .content {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          margin: auto auto;
+          justify-content: center;
+          align-items: stretch;
+          h1 {
+            font-size: 4rem;
+            color: var(--link-color);
+            margin-bottom: 0;
+            line-height: 1.2;
+          }
+          p {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            &.print {
+              margin-bottom: 3rem;
+            }
+          }
         }
       }
-    }
-  }
-</style>
+    </style>
+  </body>
+</html>

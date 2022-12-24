@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "types": ["unplugin-icons/types/svelte"]
+    "types": ["unplugin-icons/types/svelte", "@astrojs/image/client"]
   },
   "include": [
     "src/**/*.d.ts",
